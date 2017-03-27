@@ -9,29 +9,46 @@
 public class problema9 {
     public static void main(String[] args) {
         int[] sir = {34, 28, 21, 18, 16, 9, 5, 3, 1};
+//        int[] sir = {1,2,4,5,6,7,8}; // verificare pt un sir deja ordonat crescator.
+
         int var;
-        for (int j = 0; j < sir.length; j++) {
-            for (int i = 0; i < sir.length - 1; i++) {
-                do {
-                    if (sir[i + 1] < sir[i]) {
-                        var = sir[i + 1];
-                        sir[i + 1] = sir[i];
-                        sir[i] = var;
-                    } else {
-                        continue;
+        boolean sort = true;
+        for (int k = 0; k < sir.length - 1; k++) {
+            if (sir[k] > sir[k + 1]) {
+                sort = false;
+            }
+        }
+            if (sort) {
+                System.out.println("Sirul este deja ordonat crescator.");
+
+            } else {
+                System.out.println("Sirul nu este ordonat crescator.");
+                System.out.println("");
+                for (int j = 0; j < sir.length; j++) {
+                    for (int i = 0; i < sir.length - 1; i++) {
+                        do {
+                            if (sir[i + 1] < sir[i]) {
+                                var = sir[i + 1];
+                                sir[i + 1] = sir[i];
+                                sir[i] = var;
+                            } else {
+                                continue;
+                            }
+
+                        }
+                        while (sir[i + 1] < sir[i]);
+
                     }
 
-                }
-                while (sir[i + 1] < sir[i]);
-
-            }
-
 //        System.out.println(sir[3]);
-            System.out.println(Arrays.toString(sir)); //a pus println in "for" ca sa vad succesiunea inter-schimbarilor numerelor
+                    System.out.println(Arrays.toString(sir)); //a pus println in "for" ca sa vad succesiunea inter-schimbarilor numerelor
 
+                }
+            }
         }
     }
-}
+
+
 
 
 
