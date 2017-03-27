@@ -9,8 +9,6 @@ public class problema3 {
         Scanner scanner = new Scanner(System.in);
         int nr ;
         int sum = 0;
-        int SUM=0;
-        String string ="@#$%*!";
         do {
             System.out.println("Introduceti un numar: ");
             nr = scanner.nextInt();
