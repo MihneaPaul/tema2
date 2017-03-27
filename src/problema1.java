@@ -10,23 +10,27 @@ public class problema1 {
     public static void main(String[] args) {
 
 
-        int[] sir = {1, 3, 4, 6, 7, 8, 10, 13, 14, 23};
+        int[] sir = {1, 3, 4, 6, 7, 8, 10, 13, 14, 23, 4};
         int val = 4;
-        int x=0;
-        int b= -1;
-        boolean a=false;
+        int x = 0;
+        int b = -1;
+//        boolean a=false;
         for (int i = 0; i < sir.length; i++) {
             if (sir[i] == val) {
                 x = sir[i];
-                a = true;
-                b=i;
+//                a = true;
+                b = i;
+                System.out.println("Pozitia elementului " + x + " este " + b);
             }
         }
-            if(a){
-                System.out.println("Pozitia elementului "+x+" este " + b);
-            }
-            else {
+            if (b != -1) {
+//                System.out.println(b);
+//                System.out.println("Ppzitia elementului "+x+" este " + b);
+            } else {
                 System.out.println(b);
+//            }
             }
-    }
+        }
+
 }
+
